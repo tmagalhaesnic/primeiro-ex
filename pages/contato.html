@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/home/tmagalhaes/diretorio1/src/css/index.css">
+    <style>
+     
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nic.br</h1>
+        <nav>
+            <a href="#login">Login</a>
+            <a href="#help">Ajuda</a>
+        </nav>
+    </header>
+
+<form action="enviar.php" method="POST">
+    <label for="nome">Nome completo:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="finalidade">Finalidade (máximo de 50 caracteres):</label>
+    <input type="text" id="finalidade" name="finalidade" maxlength="50" required>
+
+    <label for="motivo">Motivo do contato:</label>
+    <textarea id="motivo" name="motivo" required></textarea>
+
+    <button type="button">Enviar</button></a>
+</form>
+
+<div id="mensagem-enviado" style="display: none;">
+    <p>Obrigado! Seu formulário foi enviado.</p>
+</div>
+
+<script>
+    // Exibir mensagem de confirmação após o envio do formulário
+    document.querySelector('form').addEventListener('submit', function() {
+        document.getElementById('mensagem-enviado').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>
